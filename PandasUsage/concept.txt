@@ -1,0 +1,30 @@
+NDFrame is parent class of DataFrame.
+N-dimensional analogue of DataFrame. Store multi-dimensional in a
+    size-mutable, labeled data structure
+
+
+
+class DataFrame(NDFrame):
+    """ Two-dimensional size-mutable, potentially heterogeneous tabular data
+    structure with labeled axes (rows and columns). Arithmetic operations
+    align on both row and column labels. Can be thought of as a dict-like
+    container for Series objects. The primary pandas data structure
+
+
+
+
+
+
+loc works on labels in the index.
+iloc works on the positions in the index (so it only takes integers).
+ix usually tries to behave like loc but falls back to behaving. ix is deprecated in future version.
+like iloc if the label is not in the index.
+It's important to note some subtleties that can make ix slightly tricky to use:
+
+if the index is of integer type, ix will only use label-based indexing and
+not fall back to position-based indexing.
+ If the label is not in the index, an error is raised.
+if the index does not contain only integers, then given an integer,
+ix will immediately use position-based indexing
+rather than label-based indexing. If however ix is given another type (e.g. a string),
+ it can use label-based indexing.

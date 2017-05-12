@@ -1,0 +1,9 @@
+## numpy
+the package provide via multiarray.so installed in the
+/home/junius/anaconda3/lib/python3.5/site-packages/numpy/core/multiarray.so
+
+the key data structure is ndarray, it is different with array in python.
+
+matrix is child class of ndarray.
+
+##

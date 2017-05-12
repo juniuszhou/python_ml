@@ -1,0 +1,6 @@
+# install six package.
+https://pypi.python.org/pypi/six/#downloads
+download six-1.10.0.tar.gz
+python setup.py install
+
+
